@@ -24,4 +24,8 @@ app.use(cors());
 app.use(express.json());
 app.use(routes);
 
-server.listen(3334);
+const PORT = 3333
+
+server.listen(process.env.PORT || PORT, () => {
+  console.log(`SERVIDOR INICIADO NA PORTA ${PORT}`)
+});
